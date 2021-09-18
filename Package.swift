@@ -8,11 +8,13 @@ let package = Package(
         .macOS(.v10_10),
     ],
     dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
     targets: [
         .executableTarget(
             name: "OutputUhooi",
             dependencies: [
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]),
         .testTarget(
             name: "OutputUhooiTests",
