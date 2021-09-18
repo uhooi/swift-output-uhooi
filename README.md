@@ -15,6 +15,10 @@ Uhooi speak the phrase.
 
 ## Installation
 
+### Homebrew
+
+TBD
+
 ### Mint
 
 TBD
