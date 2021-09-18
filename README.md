@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/uhooi/swift-output-uhooi)](https://github.com/uhooi/swift-output-uhooi/blob/main/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/the_uhooi?style=social)](https://twitter.com/the_uhooi)
 
-Output Uhooi emoticons.
+Uhooi speak the phrase.
 
 ## Table of Contents
 
