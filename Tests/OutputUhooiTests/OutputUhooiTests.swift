@@ -32,7 +32,7 @@ final class OutputUhooiTests: XCTestCase {
         ]
         
         for (arguments, expected, line) in testCases {
-            let binary = productsDirectory.appendingPathComponent("OutputUhooi")
+            let binary = productsDirectory.appendingPathComponent("uhooi")
 
             let process = Process()
             process.executableURL = binary
