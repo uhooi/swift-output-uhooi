@@ -7,6 +7,9 @@ let package = Package(
     platforms: [
         .macOS(.v10_10),
     ],
+    products: [
+        .executable(name: "uhooi", targets: ["OutputUhooi"]),
+    ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
