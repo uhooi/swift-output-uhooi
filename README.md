@@ -29,7 +29,21 @@ TBD
 
 ## How to use
 
-TBD
+```
+$ uhooi uhooooi
+┌|▼▼|┘<uhooooi
+
+$ uhooi "I'm uhooi."
+┌|▼▼|┘<I'm uhooi.
+
+$ uhooi --count 2 "I'm uhooi."
+┌|▼▼|┘<I'm uhooi.
+┌|▼▼|┘<I'm uhooi.
+
+$ uhooi --include-counter --count 2 "I'm uhooi."
+1: ┌|▼▼|┘<I'm uhooi.
+2: ┌|▼▼|┘<I'm uhooi.
+```
 
 ## Contribution
 
