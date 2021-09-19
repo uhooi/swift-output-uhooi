@@ -27,6 +27,17 @@ TBD
 
 TBD
 
+### Manual
+
+```shell
+$ git clone https://github.com/uhooi/swift-output-uhooi.git
+$ cd swift-output-uhooi
+$ swift build -c release
+
+$ .build/release/uhooi uhooooi
+┌|▼▼|┘<uhooooi
+```
+
 ## How to use
 
 ```
