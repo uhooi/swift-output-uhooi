@@ -21,7 +21,12 @@ TBD
 
 ### Mint
 
-TBD
+```shell
+$ mint install uhooi/swift-output-uhooi
+
+$ mint run uhooi/swift-output-uhooi uhooi uhooooi
+┌|▼▼|┘<uhooooi
+```
 
 ### Swift Package Manager
 
