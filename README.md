@@ -24,8 +24,7 @@ TBD
 ```shell
 $ mint install uhooi/swift-output-uhooi
 
-$ mint run uhooi/swift-output-uhooi uhooi uhooooi
-┌|▼▼|┘<uhooooi
+$ mint run uhooi/swift-output-uhooi uhooi -h
 ```
 
 ### Swift Package Manager
@@ -39,8 +38,7 @@ $ git clone https://github.com/uhooi/swift-output-uhooi.git
 $ cd swift-output-uhooi
 $ swift build -c release
 
-$ .build/release/uhooi uhooooi
-┌|▼▼|┘<uhooooi
+$ .build/release/uhooi -h
 ```
 
 ## How to use
