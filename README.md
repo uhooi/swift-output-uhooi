@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/uhooi/swift-output-uhooi/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/uhooi/swift-output-uhooi/actions/workflows/main.yml)
 [![Release](https://img.shields.io/github/v/release/uhooi/swift-output-uhooi)](https://github.com/uhooi/swift-output-uhooi/releases/latest)
+[![Swift Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fuhooi%2Fswift-output-uhooi%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/uhooi/swift-output-uhooi)
+[![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fuhooi%2Fswift-output-uhooi%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/uhooi/swift-output-uhooi)
 [![License](https://img.shields.io/github/license/uhooi/swift-output-uhooi)](https://github.com/uhooi/swift-output-uhooi/blob/main/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/the_uhooi?style=social)](https://twitter.com/the_uhooi)
 
