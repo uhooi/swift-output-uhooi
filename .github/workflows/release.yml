@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_12.5.1.app
+
+jobs:
+  build-release:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build for release
+      run: swift build -c release
+    - name: Archive the binary
+      run: zip uhooi.zip .build/release/uhooi
+    - name: Upload the binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: uhooi
+        path: uhooi.zip
+        retention-days: 14
+
+  deploy-binary:
+    needs: build-release
+    runs-on: macos-11
+    - uses: actions/download-artifact@v2
+      with:
+        name: uhooi
+    - name: Deploy the binary
+      uses: softprops/action-gh-release@v1
+      with:
+        files: uhooi.zip
