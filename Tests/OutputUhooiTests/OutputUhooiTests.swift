@@ -2,6 +2,9 @@ import XCTest
 import class Foundation.Bundle
 
 final class OutputUhooiTests: XCTestCase {
+    
+    // MARK: Computed Instance Properties
+    
     private var productsDirectory: URL {
       #if os(macOS)
         for bundle in Bundle.allBundles where bundle.bundlePath.hasSuffix(".xctest") {
@@ -13,12 +16,11 @@ final class OutputUhooiTests: XCTestCase {
       #endif
     }
     
-    func test_OutputUhooi() throws {
-        guard #available(macOS 10.13, *) else {
-            throw XCTSkip("This tests are for macOS 10.13+")
-        }
-
-        #if !targetEnvironment(macCatalyst)
+    // MARK: - Test Methods
+    
+    // MARK: Uhooi
+    
+    func test_Uhooi() throws {
         typealias TestCase = (arguments: [String], expected: String, line: UInt)
         let testCases: [TestCase] = [
             (["This is test."], "┌|▼▼|┘<This is test.\n", #line),
@@ -28,27 +30,41 @@ final class OutputUhooiTests: XCTestCase {
             (["-c", "2", "This is test."], "┌|▼▼|┘<This is test.\n┌|▼▼|┘<This is test.\n", #line),
             (["--include-counter", "This is test."], "1: ┌|▼▼|┘<This is test.\n", #line),
             (["--include-counter", "--count", "2", "This is test."], "1: ┌|▼▼|┘<This is test.\n2: ┌|▼▼|┘<This is test.\n", #line),
-            (["--version"], "0.1.0\n", #line),
         ]
         
         for (arguments, expected, line) in testCases {
-            let binary = productsDirectory.appendingPathComponent("uhooi")
-
-            let process = Process()
-            process.executableURL = binary
-            process.arguments = arguments
-
-            let pipe = Pipe()
-            process.standardOutput = pipe
-
-            try process.run()
-            process.waitUntilExit()
-
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            let output = String(data: data, encoding: .utf8)
-
-            XCTAssertEqual(output, expected, line: line)
+            try checkOutput(arguments: arguments, expected: expected, line: line)
         }
+    }
+    
+    func test_Uhooi_version() throws {
+        try checkOutput(arguments: ["--version"], expected: "0.1.0\n", line: #line)
+    }
+    
+    // MARK: - Other Private Methods
+    
+    private func checkOutput(arguments: [String], expected: String, line: UInt) throws {
+        guard #available(macOS 10.13, *) else {
+            throw XCTSkip("This tests are for macOS 10.13+")
+        }
+        
+        #if !targetEnvironment(macCatalyst)
+        let binary = productsDirectory.appendingPathComponent("uhooi")
+        
+        let process = Process()
+        process.executableURL = binary
+        process.arguments = arguments
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        
+        try process.run()
+        process.waitUntilExit()
+        
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: .utf8)
+        
+        XCTAssertEqual(output, expected, line: line)
         #endif
     }
 }
