@@ -6,14 +6,14 @@ final class OutputUhooiTests: XCTestCase {
     // MARK: Computed Instance Properties
     
     private var productsDirectory: URL {
-      #if os(macOS)
+        #if os(macOS)
         for bundle in Bundle.allBundles where bundle.bundlePath.hasSuffix(".xctest") {
             return bundle.bundleURL.deletingLastPathComponent()
         }
         fatalError("couldn't find the products directory")
-      #else
+        #else
         return Bundle.main.bundleURL
-      #endif
+        #endif
     }
     
     // MARK: - Test Methods
@@ -35,6 +35,26 @@ final class OutputUhooiTests: XCTestCase {
         for (arguments, expected, line) in testCases {
             try checkOutput(arguments: arguments, expected: expected, line: line)
         }
+    }
+    
+    func test_Uhooi_help() throws {
+        let expected = """
+            OVERVIEW: Uhooi speak the phrase.
+            
+            USAGE: uhooi [--include-counter] [--count <count>] <phrase>
+            
+            ARGUMENTS:
+              <phrase>                The phrase to repeat.
+            
+            OPTIONS:
+              --include-counter       Include a counter with each repetition.
+              -c, --count <count>     The number of times to repeat 'phrase'.
+              --version               Show the version.
+              -h, --help              Show help information.
+            
+            
+            """
+        try checkOutput(arguments: ["--help"], expected: expected, line: #line)
     }
     
     func test_Uhooi_version() throws {
