@@ -27,9 +27,39 @@ $ mint run uhooi/swift-output-uhooi uhooi -h
 
 ### Swift Package Manager
 
-TBD
+1. Create a folder for the CLI tools.  
+Example: `FooTools` folder.
 
-### Manual
+2. In this folder, create a file called `Package.swift` , with the following contents:
+
+```swift
+// swift-tools-version:5.4
+
+import PackageDescription
+
+let package = Package(
+    name: "FooTools",
+    platforms: [
+        .macOS(.v10_10),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.0"),
+    ],
+    targets: [.target(name: "FooTools", path: "")]
+)
+```
+
+3. If you are running Xcode 11.4 or later, in the `FooTools` folder create a file called `Empty.swift` with nothing in it. This is to satisfy a change in Swift Package Manager.
+
+4. Build and run.
+
+```shell
+$ swift build -c release ----package-path FooTools --product uhooi
+
+$ FooTools/.build/release/uhooi -h
+```
+
+### Clone and Build/run
 
 ```shell
 $ git clone https://github.com/uhooi/swift-output-uhooi.git
