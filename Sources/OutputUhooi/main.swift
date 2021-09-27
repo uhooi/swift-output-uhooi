@@ -5,7 +5,7 @@ struct Uhooi: ParsableCommand {
     
     static var configuration = CommandConfiguration(
         abstract: "Uhooi speak the phrase.",
-        version: "0.1.0"
+        version: "0.1.1"
     )
     
     @Flag(help: "Include a counter with each repetition.")
