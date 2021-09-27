@@ -43,7 +43,7 @@ let package = Package(
         .macOS(.v10_10),
     ],
     dependencies: [
-        .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.1"),
+        .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.2"),
     ],
     targets: [.target(name: "FooTools", path: "")]
 )
@@ -62,7 +62,7 @@ $ FooTools/.build/release/uhooi -h
 ### Use the binary
 
 ```shell
-$ curl -OL https://github.com/uhooi/swift-output-uhooi/releases/download/0.1.1/uhooi.zip
+$ curl -OL https://github.com/uhooi/swift-output-uhooi/releases/download/0.1.2/uhooi.zip
 $ unzip -o uhooi.zip
 $ rm -f uhooi.zip
 

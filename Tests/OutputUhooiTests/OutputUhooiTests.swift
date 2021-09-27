@@ -58,7 +58,7 @@ final class OutputUhooiTests: XCTestCase {
     }
     
     func test_Uhooi_version() throws {
-        try checkOutput(arguments: ["--version"], expected: "0.1.1\n", line: #line)
+        try checkOutput(arguments: ["--version"], expected: "0.1.2\n", line: #line)
     }
     
     // MARK: - Other Private Methods
