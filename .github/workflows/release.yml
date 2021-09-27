@@ -15,7 +15,7 @@ jobs:
     - name: Build for release
       run: swift build -c release
     - name: Archive the binary
-      run: zip uhooi.zip .build/release/uhooi
+      run: zip -j uhooi.zip .build/release/uhooi
     - name: Upload the binary
       uses: actions/upload-artifact@v2
       with:
