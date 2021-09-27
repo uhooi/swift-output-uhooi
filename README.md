@@ -43,7 +43,7 @@ let package = Package(
         .macOS(.v10_10),
     ],
     dependencies: [
-        .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.0"),
+        .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.1"),
     ],
     targets: [.target(name: "FooTools", path: "")]
 )
