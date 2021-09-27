@@ -54,7 +54,7 @@ let package = Package(
 4. Build and run.
 
 ```shell
-$ swift build -c release ----package-path FooTools --product uhooi
+$ swift build -c release --package-path FooTools --product uhooi
 
 $ FooTools/.build/release/uhooi -h
 ```
