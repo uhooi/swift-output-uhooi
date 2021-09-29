@@ -66,7 +66,7 @@ $ curl -OL https://github.com/uhooi/swift-output-uhooi/releases/download/0.1.2/u
 $ unzip -o uhooi.zip
 $ rm -f uhooi.zip
 
-$ uhooi -h
+$ ./uhooi -h
 ```
 
 ### Clone and Build/run
