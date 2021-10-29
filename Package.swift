@@ -18,9 +18,16 @@ let package = Package(
             name: "OutputUhooi",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                "OutputUhooiCore",
             ]),
         .testTarget(
             name: "OutputUhooiTests",
             dependencies: ["OutputUhooi"]),
+        .target(
+            name: "OutputUhooiCore",
+            dependencies: []),
+        .testTarget(
+            name: "OutputUhooiCoreTests",
+            dependencies: ["OutputUhooiCore"]),
     ]
 )
