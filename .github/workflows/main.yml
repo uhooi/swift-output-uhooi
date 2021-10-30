@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  run:
+  run-macos:
     name: ${{ matrix.subcommand }} with Xcode ${{ matrix.xcode }} on macOS
     runs-on: macos-11
     strategy:
@@ -25,3 +25,18 @@ jobs:
         swift $subcommand -v
       env:
         DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode }}.app
+
+  run-ubuntu:
+    name: Build and Test with Swift ${{ matrix.swift }} on Ubuntu
+    runs-on: ubuntu-latest
+    container: swift:${{ matrix.swift }}
+    strategy:
+      matrix:
+        swift: ["5.4.2", "5.5"]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and Test
+      run: |
+        swift --version
+        swift package --version
+        swift test -v
