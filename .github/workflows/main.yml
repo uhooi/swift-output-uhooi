@@ -32,7 +32,7 @@ jobs:
     container: swift:${{ matrix.swift }}
     strategy:
       matrix:
-        swift: ["5.4.2", "5.5"]
+        swift: ["5.4.2", "5.5.0"]
     steps:
     - uses: actions/checkout@v2
     - name: Build and Test
