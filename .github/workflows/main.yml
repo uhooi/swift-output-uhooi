@@ -8,6 +8,7 @@ on:
 
 jobs:
   run:
+    name: ${{ matrix.subcommand }} with Xcode ${{ matrix.xcode }} on macOS
     runs-on: macos-11
     strategy:
       matrix:
