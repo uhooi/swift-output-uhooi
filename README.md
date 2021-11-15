@@ -103,3 +103,7 @@ I would be happy if you contribute :)
 
 - [New issue](https://github.com/uhooi/swift-output-uhooi/issues/new)
 - [New pull request](https://github.com/uhooi/swift-output-uhooi/compare)
+
+## Stats
+
+[![Stats](https://repobeats.axiom.co/api/embed/45576d0847e8938bb09c598897b651aca95e7fa4.svg "Repobeats analytics image")](https://github.com/uhooi/swift-output-uhooi)
