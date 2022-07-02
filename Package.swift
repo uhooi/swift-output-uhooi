@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "OutputUhooi",
     platforms: [
-        .macOS(.v11),
+        .macOS(.v12),
     ],
     products: [
         .executable(name: "uhooi", targets: ["OutputUhooi"]),
