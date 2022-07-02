@@ -11,10 +11,17 @@ Uhooi speak the phrase.
 
 ## Table of Contents
 
+- [System requirements](#system-requirements)
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Contribution](#contribution)
 - [Stats](#stats)
+
+## System requirements
+
+- Swift: 5.0+
+- Xcode: 13.0+
+- macOS: 11.3+
 
 ## Installation
 
