@@ -1,4 +1,4 @@
-final public class TextBuilder {
+public enum TextBuilder {
     public static func buildText(phrase: String, count: Int?, includeCounter: Bool) -> String {
         let repeatCount = count ?? 1
         guard repeatCount >= 1 else {
