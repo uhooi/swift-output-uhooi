@@ -1,6 +1,7 @@
 import ArgumentParser
 import OutputUhooiCore
 
+@main
 struct Uhooi: ParsableCommand {
     
     static var configuration = CommandConfiguration(
@@ -21,5 +22,3 @@ struct Uhooi: ParsableCommand {
         print(TextBuilder.buildText(phrase: phrase, count: count, includeCounter: includeCounter))
     }
 }
-
-Uhooi.main()
