@@ -64,10 +64,6 @@ final class OutputUhooiTests: XCTestCase {
     // MARK: - Other Private Methods
     
     private func checkOutput(arguments: [String], expected: String, line: UInt) throws {
-        guard #available(macOS 10.13, *) else {
-            throw XCTSkip("This tests are for macOS 10.13+")
-        }
-        
         #if !targetEnvironment(macCatalyst)
         let binary = productsDirectory.appendingPathComponent("uhooi")
         
