@@ -2,7 +2,7 @@ import ArgumentParser
 import OutputUhooiCore
 
 @main
-struct Uhooi: ParsableCommand {
+struct Uhooi: AsyncParsableCommand {
     
     static var configuration = CommandConfiguration(
         abstract: "Uhooi speak the phrase.",
@@ -18,7 +18,7 @@ struct Uhooi: ParsableCommand {
     @Argument(help: "The phrase to repeat.")
     var phrase: String
     
-    mutating func run() throws {
+    mutating func run() async throws {
         print(TextBuilder.buildText(phrase: phrase, count: count, includeCounter: includeCounter))
     }
 }
