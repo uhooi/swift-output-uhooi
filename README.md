@@ -47,7 +47,7 @@ Example: `FooTools` folder.
     let package = Package(
         name: "FooTools",
         platforms: [
-            .macOS(.v11),
+            .macOS(.v12),
         ],
         dependencies: [
             .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.2.0"),
