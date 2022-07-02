@@ -19,9 +19,9 @@ Uhooi speak the phrase.
 
 ## System requirements
 
-- Swift: 5.0+
-- Xcode: 13.0+
-- macOS: 11.3+
+- Swift: 5.6+
+- Xcode: 13.3+
+- macOS: 12.0+
 
 ## Installation
 
@@ -40,14 +40,14 @@ Example: `FooTools` folder.
 
 2. In this folder, create a file called `Package.swift` , with the following contents:
     ```swift
-    // swift-tools-version:5.5
+    // swift-tools-version:5.6
     
     import PackageDescription
     
     let package = Package(
         name: "FooTools",
         platforms: [
-            .macOS(.v11),
+            .macOS(.v12),
         ],
         dependencies: [
             .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.2.0"),
