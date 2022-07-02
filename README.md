@@ -34,14 +34,14 @@ Example: `FooTools` folder.
 2. In this folder, create a file called `Package.swift` , with the following contents:
 
     ```swift
-    // swift-tools-version:5.4
+    // swift-tools-version:5.5
     
     import PackageDescription
     
     let package = Package(
         name: "FooTools",
         platforms: [
-            .macOS(.v10_10),
+            .macOS(.v11),
         ],
         dependencies: [
             .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.2"),
