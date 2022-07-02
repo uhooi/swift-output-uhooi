@@ -11,10 +11,17 @@ Uhooi speak the phrase.
 
 ## Table of Contents
 
+- [System requirements](#system-requirements)
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Contribution](#contribution)
 - [Stats](#stats)
+
+## System requirements
+
+- Swift: 5.0+
+- Xcode: 13.0+
+- macOS: 11.3+
 
 ## Installation
 
@@ -32,16 +39,15 @@ $ mint run uhooi/swift-output-uhooi uhooi -h
 Example: `FooTools` folder.
 
 2. In this folder, create a file called `Package.swift` , with the following contents:
-
     ```swift
-    // swift-tools-version:5.4
+    // swift-tools-version:5.5
     
     import PackageDescription
     
     let package = Package(
         name: "FooTools",
         platforms: [
-            .macOS(.v10_10),
+            .macOS(.v11),
         ],
         dependencies: [
             .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.2"),
@@ -53,7 +59,6 @@ Example: `FooTools` folder.
 3. If you are running Xcode 11.4 or later, in the `FooTools` folder create a file called `Empty.swift` with nothing in it. This is to satisfy a change in Swift Package Manager.
 
 4. Build and run.
-
     ```shell
     $ swift build -c release --package-path FooTools --product uhooi
     

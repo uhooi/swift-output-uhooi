@@ -1,11 +1,11 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
 
 import PackageDescription
 
 let package = Package(
     name: "OutputUhooi",
     platforms: [
-        .macOS(.v10_10),
+        .macOS(.v11),
     ],
     products: [
         .executable(name: "uhooi", targets: ["OutputUhooi"]),
