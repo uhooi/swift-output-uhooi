@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-11
     strategy:
       matrix:
-        xcode: ["12.5.1", "13.0"]
+        xcode: ["13.0", "13.1", "13.2.1"]
         subcommand: ["Build", "Test"]
     steps:
     - uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
     container: swift:${{ matrix.swift }}
     strategy:
       matrix:
-        swift: ["5.4.2", "5.5.0"]
+        swift: ["5.5.0", "5.5.1", "5.5.2", "5.5.3"]
     steps:
     - uses: actions/checkout@v2
     - name: Build and Test
