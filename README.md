@@ -32,7 +32,6 @@ $ mint run uhooi/swift-output-uhooi uhooi -h
 Example: `FooTools` folder.
 
 2. In this folder, create a file called `Package.swift` , with the following contents:
-
     ```swift
     // swift-tools-version:5.5
     
@@ -53,7 +52,6 @@ Example: `FooTools` folder.
 3. If you are running Xcode 11.4 or later, in the `FooTools` folder create a file called `Empty.swift` with nothing in it. This is to satisfy a change in Swift Package Manager.
 
 4. Build and run.
-
     ```shell
     $ swift build -c release --package-path FooTools --product uhooi
     
