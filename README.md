@@ -50,7 +50,7 @@ Example: `FooTools` folder.
             .macOS(.v11),
         ],
         dependencies: [
-            .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.1.2"),
+            .package(url: "https://github.com/uhooi/swift-output-uhooi", exact: "0.2.0"),
         ],
         targets: [.target(name: "FooTools", path: "")]
     )
@@ -68,7 +68,7 @@ Example: `FooTools` folder.
 ### Use the binary
 
 ```shell
-$ curl -OL https://github.com/uhooi/swift-output-uhooi/releases/download/0.1.2/uhooi.zip
+$ curl -OL https://github.com/uhooi/swift-output-uhooi/releases/download/0.2.0/uhooi.zip
 $ unzip -o uhooi.zip
 $ rm -f uhooi.zip
 

@@ -58,16 +58,12 @@ final class OutputUhooiTests: XCTestCase {
     }
     
     func test_Uhooi_version() throws {
-        try checkOutput(arguments: ["--version"], expected: "0.1.2\n", line: #line)
+        try checkOutput(arguments: ["--version"], expected: "0.2.0\n", line: #line)
     }
     
     // MARK: - Other Private Methods
     
     private func checkOutput(arguments: [String], expected: String, line: UInt) throws {
-        guard #available(macOS 10.13, *) else {
-            throw XCTSkip("This tests are for macOS 10.13+")
-        }
-        
         #if !targetEnvironment(macCatalyst)
         let binary = productsDirectory.appendingPathComponent("uhooi")
         
