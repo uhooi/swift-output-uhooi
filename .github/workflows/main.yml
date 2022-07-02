@@ -9,10 +9,10 @@ on:
 jobs:
   run-macos:
     name: ${{ matrix.subcommand }} with Xcode ${{ matrix.xcode }} on macOS
-    runs-on: macos-11
+    runs-on: macos-12
     strategy:
       matrix:
-        xcode: ["13.0", "13.1", "13.2.1"]
+        xcode: ["13.3.1", "13.4", "13.4.1"]
         subcommand: ["Build", "Test"]
     steps:
     - uses: actions/checkout@v3
@@ -32,7 +32,7 @@ jobs:
     container: swift:${{ matrix.swift }}
     strategy:
       matrix:
-        swift: ["5.5.0", "5.5.1", "5.5.2", "5.5.3"]
+        swift: ["5.6.0", "5.6.1", "5.6.2"]
     steps:
     - uses: actions/checkout@v3
     - name: Build and Test
